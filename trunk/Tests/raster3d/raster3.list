@@ -1,0 +1,24 @@
+#!/bin/sh
+#Raster3d modules
+ListDescription="Raster3d (r3.*) modules test"
+
+#Modules which should be tested first
+#If one tests fails, the framework will stop
+DepModules="
+r3.mapcalc-test.sh
+"
+
+#This modules will be tested without a dependency, just add a new one
+#they will only depend from the DepModules
+Modules="
+r3.cross.rast-test.sh
+r3.info-test.sh
+r3.in.ascii-test.sh
+r3.mask-test.sh
+r3.null-test.sh
+r3.out.vtk-test.sh
+r3.out.ascii-test.sh
+r3.timestamp-test.sh
+r3.to.rast-test.sh
+"
+

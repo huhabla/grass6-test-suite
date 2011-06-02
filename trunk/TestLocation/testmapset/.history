@@ -1,0 +1,124 @@
+#+1146508009
+exit
+#+1146508017
+./RunGRASSTestSuite.sh -r
+#+1146508124
+./RunGRASSTestSuite.sh -r
+#+1146508160
+r.stats help
+#+1146508168
+g.list rast
+#+1146508172
+g.list vect
+#+1146508181
+g.list rast3
+#+1146508182
+g.list rast3d
+#+1146508185
+clear
+#+1146508190
+r.stats help
+#+1146508221
+r.stats help
+#+1146508401
+./RunGRASSTestSuite.sh module=Tests/raster/r.stats-test.sh
+#+1146508628
+./RunGRASSTestSuite.sh module=Tests/raster/r.stats-test.sh
+#+1146508637
+./RunGRASSTestSuite.sh module=Tests/raster/r.stats-test.sh
+#+1146509140
+./RunGRASSTestSuite.sh module=Tests/raster/r.stats-test.sh
+#+1146509211
+./RunGRASSTestSuite.sh module=Tests/raster/r.stats-test.sh
+#+1146509459
+r.surf.idw help
+#+1146509462
+r.surf.idw2 help
+#+1146509574
+r.surf.idw2 inpit=points output=test1
+#+1146509579
+r.surf.idw2 input=points output=test1
+#+1146509591
+gis.m &
+#+1146509627
+r.surf.idw2 input=points npoints=100 output=test1
+#+1146509629
+r.surf.idw2 input=points npoints=100 output=test2
+#+1146509645
+r.surf.idw input=points npoints=100 output=test3
+#+1146509674
+./RunGRASSTestSuite.sh module=Tests/raster/r.surf.idw2-test.sh
+#+1146509699
+./RunGRASSTestSuite.sh module=Tests/raster/r.surf.idw2-test.sh
+#+1146509714
+r.surf.idw input=lines npoints=100 output=test4
+#+1146509761
+./RunGRASSTestSuite.sh module=Tests/raster/r.surf.idw-test.sh
+#+1146509766
+./RunGRASSTestSuite.sh module=Tests/raster/r.surf.idw2-test.sh
+#+1146509769
+./RunGRASSTestSuite.sh module=Tests/raster/r.surf.idw-test.sh
+#+1146509797
+./RunGRASSTestSuite.sh module=Tests/raster/r.surf.idw-test.sh
+#+1146509799
+./RunGRASSTestSuite.sh module=Tests/raster/r.surf.idw2-test.sh
+#+1146509801
+./RunGRASSTestSuite.sh module=Tests/raster/r.surf.idw-test.sh
+#+1146509817
+r.surf.random help
+#+1146509969
+./RunGRASSTestSuite.sh module=Tests/raster/r.surf.random-test.sh
+#+1146509994
+./RunGRASSTestSuite.sh module=Tests/raster/r.surf.random-test.sh
+#+1146510011
+./RunGRASSTestSuite.sh module=Tests/raster/r.surf.random-test.sh
+#+1146510012
+./RunGRASSTestSuite.sh module=Tests/raster/r.surf.random-test.sh
+#+1146510029
+r.out.gdal help
+#+1146510051
+./RunGRASSTestSuite.sh -r3
+#+1146510136
+./RunGRASSTestSuite.sh -r3vgdh
+#+1146510241
+./RunGRASSTestSuite.sh -gh
+#+1146510320
+./RunGRASSTestSuite.sh -gh
+#+1146510339
+./RunGRASSTestSuite.sh -r3vgdh
+#+1146510514
+./RunGRASSTestSuite.sh -r3vgduh
+#+1146511601
+./RunGRASSTestSuite.sh module=Tests/raster/r.out.vtk-test.sh
+#+1146511689
+./RunGRASSTestSuite.sh module=Tests/raster/r.out.ascii-test.sh
+#+1146511821
+r.out.gdal help
+#+1146511962
+./RunGRASSTestSuite.sh module=Tests/raster/r.out.gdal-test.sh
+#+1146512005
+./RunGRASSTestSuite.sh module=Tests/raster/r.out.gdal-test.sh
+#+1146512028
+./RunGRASSTestSuite.sh module=Tests/raster/r.out.gdal-test.sh
+#+1146512128
+./RunGRASSTestSuite.sh module=Tests/raster/r.out.gdal-test.sh
+#+1146512136
+./RunGRASSTestSuite.sh -r3vgduh
+#+1146512331
+g.list rast
+#+1146512341
+g.mremove rast=test\*
+#+1146512345
+g.list region
+#+1146512353
+g.list vect
+#+1146512358
+g.list rast3d
+#+1146512361
+exit
+#+1146587117
+ll
+#+1146587123
+gis.m
+#+1146587147
+exit

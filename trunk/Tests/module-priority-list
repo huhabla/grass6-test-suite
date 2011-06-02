@@ -1,0 +1,98 @@
+# Most wanted/used Modules for G61
+g.x   
+db.x  
+r.*   
+ + r.in.*         
+ + r.out.*        
+ + r.mapcalc      
+ + r.null
+ + r.proj
+ + r.slope.aspect
+ + r.param.scale, 
+ + r.terraflow
+ + r.watershed
+ + r.fill.dir
+ + r.buffer
+ + r.distance
+ + r.neighbours
+ + r.stats
+ + r.surf.*
+ + r.to.vect
+ + 
+
+v.*
+ + v.in.*         
+ + v.out.*        
+ + v.external     
+ + v.build        
+ + v.clean        
+ + v.digit        
+ + v.net.*        
+ + v.db.*         
+ + v.to.db        
+ + v.extract      
+ + v.select       
+ + v.buffer       
+ + v.overlay      
+ + v.patch        
+ + v.proj         
+ + v.reclass      
+ + v.surf.*       
+ + v.what.*       
+ 
+# weniger priorit
+ + v.category     
+ + v.convert      
+ + v.distance     
+ + v.drape        
+ + v.extrude      
+ + v.hull         
+ + v.kcv          
+ + v.kernel       
+ + v.mkgrid       
+ + v.neighbours   
+ + v.normal       
+ + v.parallel     
+ + v.patch        
+ + v.perturb      
+ + v.qcount       
+ + v.random       
+ + v.segment      
+ + v.split        
+ + v.to.points    
+ + v.to.rast      
+ + v.to.rast3     
+ + v. transform   
+ + v.type         
+ + v.univar       
+ + v.vol.rst      
+ + v.voroni       
+ 
+ 
+d.* 
+ + d.rast*
+ + d.vect*
+ + d.erase
+ + d.his
+ + d.m
+ + d.mon
+ + d.what.*
+ +
+ 
+s.*
+ + s.in/out/.ascii
+ 
+ 
+Scripts:
+ + g.manual       
+ + g.mlist        
+ + g.mremove      
+ + r.fillnulls    
+ + v.build.all    
+ + v.convert.all  
+ + v.in.mapgen    
+ + v.in.sites.all 
+ + v.rast.stats   
+ + v.report       
+ + v.what.vect    
+ 

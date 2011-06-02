@@ -1,0 +1,14 @@
+#!/bin/sh
+#Raster modules
+ListDescription="GRASS library tests"
+
+#Modules which should be tested first
+#If one tests fails, the framework will stop
+DepModules="
+"
+#This modules will be tested without a dependency, just add a new one
+#they will only depend from the DepModules
+Modules="
+gmath-test.sh
+gpde-test.sh
+"

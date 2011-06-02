@@ -1,0 +1,3 @@
+COMMAND: r.contour input="elevation" output="elevation" step=20 cut=0
+GISDBASE: /home/soeren/Diplomarbeit/Programm/GRASS_Testsuite
+LOCATION: TestLocation MAPSET: PERMANENT USER: soeren DATE: Sun Apr 30 12:56:08 2006

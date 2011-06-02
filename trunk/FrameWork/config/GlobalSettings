@@ -1,0 +1,91 @@
+############################################################################
+# 
+# AUTHOR(S):    Soeren Gebbert soerengebbert <at> gmx <dot> de
+# PURPOSE:      Part of the grass test suite
+# COPYRIGHT:    (C) 2005 by the GRASS Development Team
+#
+#               This program is free software under the GNU General Public
+#               License (>=v2). Read the file COPYING that comes with GRASS
+#               for details.
+#
+#############################################################################
+
+
+
+##########################################
+# This file contains the global settings #
+# of the testsuite                       #
+##########################################
+
+#Set some important Variables
+Version="0.2.0.14"
+
+export DISPLAY_TEST_PATH="${TESTSUITE_INSTALLDIR}/Tests/display"
+export GENERAL_TEST_PATH="${TESTSUITE_INSTALLDIR}/Tests/general"
+export IMAGE_TEST_PATH="${TESTSUITE_INSTALLDIR}/Tests/imagery"
+export RASTER_TEST_PATH="${TESTSUITE_INSTALLDIR}/Tests/raster"
+export RASTER3_TEST_PATH="${TESTSUITE_INSTALLDIR}/Tests/raster3d"
+export SCRIPT_TEST_PATH="${TESTSUITE_INSTALLDIR}/Tests/scripts"
+export VECTOR_TEST_PATH="${TESTSUITE_INSTALLDIR}/Tests/vector"
+export LIBRARY_TEST_PATH="${TESTSUITE_INSTALLDIR}/Tests/libs"
+export DB_TEST_PATH="${TESTSUITE_INSTALLDIR}/Tests/db"
+#Data directory for external data (bitmaps, shape files, ascii files, sql statements ...)
+export EXTERNAL_DATA_PATH="${TESTSUITE_INSTALLDIR}/ExternalData"
+
+#The lists
+display_list="${DISPLAY_TEST_PATH}/display.list"
+general_list="${GENERAL_TEST_PATH}/general.list"
+raster_list="${RASTER_TEST_PATH}/raster.list"
+raster3_list="${RASTER3_TEST_PATH}/raster3.list"
+script_list="${SCRIPT_TEST_PATH}/script.list"
+vector_list="${VECTOR_TEST_PATH}/vector.list"
+library_list="${LIBRARY_TEST_PATH}/library.list"
+db_list="${DB_TEST_PATH}/db.list"
+image_list="${IMAGE_TEST_PATH}/image.list"
+
+#enable zlib support
+export GRASS_INT_ZLIB=1
+
+#the float precision (dp) of the validation test's
+##################################################
+# ATTENTION: all created md5 checksums depending #
+# on this settings!!!                            #
+##################################################
+export VECT_TEST_PRECISION=2
+export RAST_TEST_PRECISION=3 
+
+unset LC_ALL
+export LC_NUMERIC=C
+
+
+##################################################
+# the settings will be checked if set to no, if  #
+# set to yes, they will not checked              #
+##################################################
+
+export HAVE_BLAS="no"
+export HAVE_CXX="no"
+export HAVE_DWG="no"
+export HAVE_FFMPEG="no"
+export HAVE_FFTW="no"
+export HAVE_FREETYPE="no"
+export HAVE_GDAL="no"
+export HAVE_GLW="no"
+export HAVE_JPEG="no"
+export HAVE_LAPACK="no"
+export HAVE_LFS="no"
+export HAVE_MOTIF="no"
+export HAVE_MYSQL="no"
+export HAVE_NLS="no"
+export HAVE_ODBC="no"
+export HAVE_OGR="no"
+export HAVE_OPENGL="no"
+export HAVE_PNG="no"
+export HAVE_POSTGRESQL="no"
+export HAVE_PROJ="no"
+export HAVE_READLINE="no"
+export HAVE_SQLITE="no"
+export HAVE_TCLTK="no"
+export HAVE_TIFF="no"
+export HAVE_X11="no"
+

@@ -1,0 +1,19 @@
+#!/bin/sh
+#database modules
+ListDescription="Database (db.*) modules test"
+
+#Modules which should be tested first, they have to return 0 for success or 1 for fail!
+DepModules=""
+#The modules will be tested without a dependency, just add a new one
+Modules="
+db.columns-test.sh  
+db.copy-test.sh      
+db.drivers-test.sh  
+db.tables-test.sh
+db.connect-test.sh  
+db.describe-test.sh  
+db.execute-test.sh  
+db.select-test.sh  
+db.test-test.sh
+"
+

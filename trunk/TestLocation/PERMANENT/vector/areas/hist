@@ -1,0 +1,11 @@
+COMMAND: v.random -z output="random" n=25 zmin=100 zmax=300
+GISDBASE: /home/soeren/Diplomarbeit/Programm/GRASS_Testsuite
+LOCATION: TestLocation MAPSET: PERMANENT USER: soeren DATE: Sun Apr 30 14:19:21 2006
+---------------------------------------------------------------------------------
+COMMAND: v.db.connect map="random" driver="dbf" database="$GISDBASE/$LOCATION_NAME/$MAPSET/dbf/" table="random" key="cat" layer=1
+GISDBASE: /home/soeren/Diplomarbeit/Programm/GRASS_Testsuite
+LOCATION: TestLocation MAPSET: PERMANENT USER: soeren DATE: Sun Apr 30 14:24:27 2006
+---------------------------------------------------------------------------------
+COMMAND: v.voronoi input="random" output="areas"
+GISDBASE: /home/soeren/Diplomarbeit/Programm/GRASS_Testsuite
+LOCATION: TestLocation MAPSET: PERMANENT USER: soeren DATE: Sun Apr 30 14:25:56 2006

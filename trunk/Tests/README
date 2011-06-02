@@ -1,0 +1,16 @@
+This directory contains all tests (in the corresponding subdir)
+for the test suite.
+
+db   ---------------------------- database modules tests
+display   ----------------------- display modules tests
+general   ----------------------- general modules tests
+imagery   ----------------------- imagery modules tests
+module-priority-list   ---------- a list of tests which should be implemented
+MyGrassTest   ------------------- different unsorted modules tests
+raster   ------------------------ raster modules tests
+raster3d   ---------------------- g3d modules tests
+scripts   ----------------------- script tests
+vector   ------------------------ vector modules tests
+
+
+

@@ -1,0 +1,56 @@
+#+1146392935
+r.in.onearth -l tmband=Pan
+#+1146392944
+d.mon start=x0
+#+1146392951
+d.rast
+#+1146392969
+bg
+#+1146392974
+g.region -mb
+#+1146393066
+d.rast &
+#+1146393083
+g.region -p3
+#+1146393115
+g.region t=300 b=100 tbres=40
+#+1146393120
+g.region -p3
+#+1146393138
+g.region t=300 b=100 tbres=40 res=20
+#+1146393139
+g.region -p3
+#+1146393149
+r.in.onearth -l tmband=Pan
+#+1146393165
+g.remove rast=LandsatTM_Pan
+#+1146393166
+r.in.onearth -l tmband=Pan
+#+1146393174
+g.region -p3
+#+1146393184
+g.region --help
+#+1146393212
+g.region -l
+#+1146393253
+g.region -p
+#+1146393255
+g.region -p3
+#+1146393340
+g.region save=3dregion
+#+1146393343
+exit
+#+1146393408
+g.region -d
+#+1146393409
+g.region -p3
+#+1146393419
+g.region -d
+#+1146393419
+g.region -p3
+#+1146393464
+g.region res3=20 tbres=40
+#+1146393466
+g.region -p3
+#+1146393469
+exit

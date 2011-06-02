@@ -1,0 +1,127 @@
+############################################################################
+# 
+# AUTHOR(S):    Soeren Gebbert soerengebbert <at> gmx <dot> de
+# PURPOSE:      Part of the grass test suite
+# COPYRIGHT:    (C) 2005 by the GRASS Development Team
+#
+#               This program is free software under the GNU General Public
+#               License (>=v2). Read the file COPYING that comes with GRASS
+#               for details.
+#
+#############################################################################
+
+
+###########################################
+# This is a template file for the GRASS   #
+# Test framework, do not change the vari- #
+# able names or values.                   #
+###########################################
+
+#########################################################
+#Dont touch this vars if you dont know what you are doing
+#########################################################
+#Run the function TestModules/CleanUp, 
+#set this to 1 (false) if you want to run this function 
+#by your own
+TestModulesFlag=0 #run the test
+CleanUpFlag=0 #clean up after the test
+ValidateData=0 #if md5 sums are provided validate the data
+#######################################################
+
+#now the normal stuff
+
+#The Titel is important for all tests, set a unique title for every test
+Titel="none" # -- required
+
+#A description of the test, the description will be added to the summary
+#write a short but usefull description
+Description="none" # -- optional
+
+#Thats the default region setting for every test, you have 
+#to overwrite this setting to set your proper testregion
+#this region will be set bevor every test
+### !! DO NOT CHANGE THIS HERE, SOME TESTS DEPEND ON THIS SETTINGS (MD5) !! ###
+TestRegion="-d"
+
+#Set the testlocation name, if we are not in the testlocation,
+#the test will not performed
+RequiredTestLocation="TestLocation"
+
+#The number of tests that should performed 1 - 255
+NumberOfTests=0 # -- not required, but if given, be sure you declared the correct number
+
+#Set which kind of Test, unit or integration
+#    unit        -- all test are independent from each other 
+#    integration -- the tests depend from each other in increasing numbering, 
+#                   if one fails the entire test will fail
+TestType="unit" #thats the default setting
+
+#The modules which should be tested, 
+#the number of modules have to be equal to the number of Tests
+Module[0]=""  # -- required
+
+#name of the output map, important for removing 
+#please provide every output that should be removed with the index of
+#the output-creation-module
+ModuleOutput[0]=""  # -- not required
+
+#options are: rast, rast3d, file, vect, icon, labels, region, group
+#please provide every output type that should be removed or validated with the index of
+#the module which creates this output
+ModuleOutputType[0]=""  # -- required
+
+### !!!!! ###
+#all valid ModuleOutput's (valid name and type) will be removed at the end of all tests 
+### !!!!! ###
+
+#the module options
+#the number of options have to be equal to the number of Tests
+ModuleOptions[0]=""  # -- required
+
+### !!!!! ###
+#For now only vector (vect), raster (rast), raster3 (rast3d) and files are tested via md5 checksum
+#if a file or map is given and a checksum, the checksum will be used to 
+#safe cpu time
+### !!!!! ###
+
+#The map, file for validation check
+#the n-th output will be compared with the n-th validation map/file
+ModuleValidation[0]=""  # -- optional
+
+#the optional md5 checksum
+#the n-th output will be compared with the n-th md5 checksum
+#Because of the precision issue md5 checksum's that are required from 
+#v.out.ascci output or
+#r.out.ascci output or
+#r3.out.ascci output
+ModuleValidationMD5[0]="" # -- optional
+
+###################################################
+# default no dependencies are set, the user have to
+# set them in the test scripts by hand!
+NEED_BLAS="no"
+NEED_CXX="no"
+NEED_DWG="no"
+NEED_FFMPEG="no"
+NEED_FFTW="no"
+NEED_FREETYPE="no"
+NEED_GDAL="no"
+NEED_GLW="no"
+NEED_JPEG="no"
+NEED_LAPACK="no"
+NEED_LFS="no"
+NEED_MOTIF="no"
+NEED_MYSQL="no"
+NEED_NLS="no"
+NEED_ODBC="no"
+NEED_OGR="no"
+NEED_OPENGL="no"
+NEED_PNG="no"
+NEED_POSTGRESQL="no"
+NEED_PROJ="no"
+NEED_READLINE="no"
+NEED_SQLITE="no"
+NEED_TCLTK="no"
+NEED_TIFF="no"
+NEED_X11="no"
+

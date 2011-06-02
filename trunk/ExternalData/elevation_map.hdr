@@ -1,0 +1,14 @@
+ENVI
+description = {
+elevation_map.envi}
+samples = 100
+lines   = 100
+bands   = 1
+header offset = 0
+file type = ENVI Standard
+data type = 4
+interleave = bsq
+byte order = 0
+map info = {UTM, 1, 1, 400000.000000, 5582000.000000, 20.000000, 20.000000, 32, North}
+band names = {
+Band 1}

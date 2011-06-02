@@ -1,0 +1,25 @@
+#!/bin/sh
+#general modules
+ListDescription="General (g.*) modules test"
+
+#Modules which should be tested first
+#If one tests fails, the framework will stop
+DepModules="
+"
+
+#This modules will be tested without a dependency, just add a new one
+#they will only depend from the DepModules
+Modules="
+g.copy-test.sh
+g.findfile-test.sh
+g.filename-test.sh
+g.remove-test.sh
+g.rename-test.sh
+g.proj-test.sh
+g.tempfile-test.sh
+g.gisenv-test.sh
+g.list-test.sh
+g.region-test.sh
+g.version-test.sh
+"
+
