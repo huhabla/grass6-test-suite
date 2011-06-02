@@ -14,7 +14,7 @@ variables which are used to perform the tests. The variables we need are:
 This is the title of the test, this title identifies the test within the logfile and the summary
 
 {{{Description}}}
-  
+
 The description is important. You have to write a short description what kind of test you want to make and why
 
 
