@@ -1,0 +1,9 @@
+#!/bin/sh
+#image modules
+ListDescription="grass scripts test"
+
+#Modules which should be tested first, they have to return 0 for success or 1 for fail!
+DepModules=""
+#The modules will be tested without a dependency, just add a new one
+Modules=""
+

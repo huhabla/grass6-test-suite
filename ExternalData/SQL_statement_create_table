@@ -1,0 +1,1 @@
+create table soils (cat integer, soiltype varchar(10) )

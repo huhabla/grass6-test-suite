@@ -1,0 +1,38 @@
+############################################################################
+# 
+# AUTHOR(S):    Soeren Gebbert soerengebbert <at> gmx <dot> de
+# PURPOSE:      Part of the grass test suite
+# COPYRIGHT:    (C) 2005 by the GRASS Development Team
+#
+#               This program is free software under the GNU General Public
+#               License (>=v2). Read the file COPYING that comes with GRASS
+#               for details.
+#
+#############################################################################
+
+##########################################################
+#This file contains known errors from grass modules and  #
+#the answers for the Guessed error report in the logfile #
+##########################################################
+
+#the known erros
+KnownErrors[0]="FATAL"
+KnownErrors[1]="Usage:"
+KnownErrors[2]="Segmentation fault"
+KnownErrors[3]="core dumped"
+KnownErrors[4]="Assertion"
+KnownErrors[5]="command not found"
+KnownErrors[6]="Cell file not found"
+KnownErrors[7]="Cannot find"
+KnownErrors[8]="No such file or directory"
+
+#the textmessage for the failsummary
+KnownErrorMessages[0]="The module produced a FATAL ERROR! Use gdb to verify."
+KnownErrorMessages[1]="Wrong usage of the module! Check the command line options."
+KnownErrorMessages[2]="The module produced a Segmentation fault! Use gdb to verify."
+KnownErrorMessages[3]="The module produced a core dump! Use gdb to verify."
+KnownErrorMessages[4]="The module produced a assertion! Use gdb to verify."
+KnownErrorMessages[5]="The module does not exist! Check if this module is installed or the module entry in the test script."
+KnownErrorMessages[6]="The input cell file was not found. Check the dataset or the test script entry."
+KnownErrorMessages[7]="The input file was not found. Check the dataset or the test script entry."
+KnownErrorMessages[8]="The module does not exist, or valgrind didnt find it! Check if this module is installed or the module entry in the test script."

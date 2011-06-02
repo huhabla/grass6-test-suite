@@ -1,0 +1,44 @@
+#!/bin/sh
+#Raster modules
+ListDescription="Raster (r.*) modules test"
+
+#Modules which should be tested first
+#If one tests fails, the framework will stop
+DepModules="
+"
+#This modules will be tested without a dependency, just add a new one
+#they will only depend from the DepModules
+Modules="
+r.buffer-test.sh
+r.distance-test.sh
+r.fill.dir-test.sh
+r.gwflow-test.sh
+r.in.ascii-test.sh
+r.info-test.sh
+r.in.gdal-test.sh
+r.mapcalc-test.sh
+r.mapcalc-zlib-bug-test.sh
+r.neighbours-test.sh
+r.null-test.sh
+r.out.ascii-test.sh
+r.out.gdal-test.sh
+r.out.vtk-test.sh
+r.param.scale-test.sh
+r.slope.aspect-test.sh
+r.stats-test.sh
+r.surf.idw2-test.sh
+r.surf.idw-test.sh
+r.surf.random-test.sh
+r.terraflow-test.sh
+r.timestamp-test.sh
+r.to.rast3-test.sh
+r.to.rast3elev-test.sh
+r.to.vect-test.sh
+r.univar-test.sh
+r.volume-test.sh
+r.watershed-test.sh
+r.walk-test.sh
+r.water.outlet-test.sh
+r.what-test.sh
+"
+

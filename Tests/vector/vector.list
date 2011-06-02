@@ -1,0 +1,28 @@
+#!/bin/sh
+#Vector module tests
+ListDescription="Vector (v.*) modules test"
+
+#Modules which should be tested first
+#If one tests fails, the framework will stop
+DepModules=""
+
+#This modules will be tested without a dependency, just add a new one
+#they will only depend from the DepModules
+Modules="
+v.buffer-test.sh
+v.drape-test.sh
+v.extract-test.sh
+v.hull-test.sh
+v.info-test.sh
+v.in.ascii-test.sh
+v.in.dxf-test.sh
+v.in.ogr-test.sh
+v.out.vtk-test.sh
+v.out.ogr-test.sh
+v.out.pov-test.sh
+v.out.dxf-test.sh
+v.patch-test.sh
+v.parallel-test.sh
+v.surf.idw-test.sh
+"
+

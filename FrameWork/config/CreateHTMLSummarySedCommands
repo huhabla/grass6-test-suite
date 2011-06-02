@@ -1,0 +1,32 @@
+##################
+#Sed html command#
+##################
+s'++++'<table border="0" cellpadding="2" cellspacing="1" width="100%" bgcolor="#ffffff">'g 
+s'----'</table>'g
+s'+++!'<tr bgcolor="#ffffff"><td>'g
+s'!---'<tr bgcolor="#eeeeee"><th colspan="2" nowrap>'g
+s'!+++'<tr bgcolor="#eecccc"><td nowrap>'g
+s'+++'<tr bgcolor="#cceecc"><td nowrap>'g
+s'<--'<tr bgcolor="#ffffff"><th colspan="5" nowrap><h3>'g
+s'-->'</h3></th></tr>'g
+s'---'</td></tr>'g
+s'+-+-'<tr bgcolor="#eeeeee"><th colspan="2" nowrap>'g
+s'-+-+'</td></tr>'g
+s'-+-'<h2>'g
+s'+-+'</h2>'g
+s'!++'<tr bgcolor="#ccaaaa"><td nowrap>'g
+s'++'<tr bgcolor="#aaccaa"><td nowrap>'g
+s'--'</td></tr>'g
+s':::'</th><td colspan="3" bgcolor="#ffffff" align="left">'g
+s':-:'</td><td>'g
+s'::'</td><td>'g
+s'module-failure'<font color=#ff0000>module-failure</font>'g
+s'validation-failure'<font color=#ff0000>validation-failure</font>'g
+s'Output invalid'<font color=#ff0000>output-invalid</font>'g
+s'memory errors detected'<font color=#cc3333>memory-errors-detected</font>'g
+s'-ID-'<a href="filenamedummy#'g 
+s'+ID+'"> log-> </a> 'g
+s'-MEM-'<br><a href="htmlpath'g 
+s'+MEM+'"> memlog-> </a>'g
+s'!§'<br>(<a href="htmlpath'g 
+s'§!'" target="blank" >source</a>)'g

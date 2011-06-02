@@ -1,0 +1,69 @@
+# To start GRASS use the StartGRASS.sh script
+# Make sure grass64 is located in your PATH 
+# because grass64 will be started 
+
+./StartGRASS.sh
+
+#type "./StartGRASS.sh grass62" if you want to start grass62
+
+# The test suite works like all other grass scripts, 
+# g.parser is used to parse the command line
+# and a tcl/tk gui will created automatically 
+# if the test suite is started without parameters and 
+# if its located in your addon path
+
+# Befor the general and vector test can be run, make sure the database paths
+# are set correctly. To asure this, start the test suite with option "-d" first
+
+./RunGRASSTestSuite.sh -d
+
+# the output should look like this
+
+Mapset <testmapset> in Location <TestLocation>
+GRASS 6.1.cvs > ./RunGRASSTestSuite.sh -d
+===========================================================
+Start testing database (db.*) modules
+===========================================================
+db.columns test:   success  success  success  success   finished
+db.copy test:   success  success  success   finished
+db.drivers test:   success  success   finished
+db.tables test:   success  success  success  success   finished
+db.connect test:   success  success  success   finished
+db.describe test:   success  success  success  success  success  success   finished
+db.execute test:   success  success   finished
+db.select test:   success  success  success  success  success   finished
+db.test test:   success  success   finished
+===========================================================
+Finished testing database (db.*) modules
+===========================================================
+Creating text files
+
+
+# Now all databse links should be set automatically 
+# and all database modules are tested
+# All other tests are available now
+
+# general tests
+./RunGRASSTestSuite.sh -g
+
+# raster tests
+./RunGRASSTestSuite.sh -r
+
+# raster3d tests 
+./RunGRASSTestSuite.sh -3
+
+# vector tests
+./RunGRASSTestSuite.sh -v
+
+# library tests
+./RunGRASSTestSuite.sh -l
+
+# All together
+./RunGRASSTestSuite.sh -dgr3vl
+
+# For html generation to use at any webspace ;)
+./RunGRASSTestSuite.sh -dgr3vlh htmlfile=index.html htmlfilelog=log.html htmlpath=./
+
+# with memory check
+./RunGRASSTestSuite.sh -dgr3vlm
+./RunGRASSTestSuite.sh -dgr3vlhm htmlfile=index.html htmlfilelog=log.html htmlpath=./

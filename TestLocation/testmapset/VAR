@@ -1,0 +1,2 @@
+DB_DRIVER: dbf
+DB_DATABASE: /home/soeren/src/GRASS_Testsuite/TestLocation/PERMANENT/dbf/
