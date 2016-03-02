@@ -1,0 +1,98 @@
+# HowTo write a GRASS testscript #
+
+
+To write a GRASS testscript for this framework is quite easy.
+You can write tests for one module, like g.version-test.sh or
+for a combination of servaral modules, like r.mapcalc-zlib-bug.sh.
+
+We will start with a very small example. Lets test the module g.list.
+First we have to take a look at the config/TestScriptTemplate, which defines all the
+variables which are used to perform the tests. The variables we need are:
+
+`Title`
+
+This is the title of the test, this title identifies the test within the logfile and the summary
+
+`Description`
+
+The description is important. You have to write a short description what kind of test you want to make and why
+
+
+`Module[0]`
+
+this variable is an array which holds all the modules which will be executed by the framework
+
+`ModuleOptions[0]`
+
+This array holds the command line options for the executed module
+
+Lets build now the small testscript. We want to test g.list to lists all raster
+and vector modules.
+If g.list is doing this right, it should exit with a success status. The framework will check
+this and creates the summary and the logfile.
+The summary lists all performed test (fail and success). Every module output
+(stdout and stderr) is written to the logfile.
+
+```
+##### the g.list testscript g.list-rv-test.sh ######
+
+Title="g.list short function test"
+Description="This will test if g.list lists all raster maps in the current mapset."
+
+Module[0]="g.list"
+Module[1]="g.list"
+
+ModuleOptions[0]="rast"
+ModuleOptions[1]="vect"
+
+##### end #####
+```
+
+Copy this testscript to the "Tests/general" directoy and make an entry in the general.list
+file.
+Now we can run this testscript if we start the Testsuite with the option "module=Tests/general/g.list-rv-test.sh"
+for testing the single moduel or we can use the option "-g",
+this will performe all test available in general.list.
+
+Run all raster test: (be sure you are in the GRASS\_Testsuite directory running GRASS)
+```
+./RunGRASSTestSuite.sh -g
+```
+
+Run only the new test: (be sure you are in the GRASS\_Testsuite directory running GRASS)
+```
+./RunGRASSTestSuite.sh module=./Tests/general/g.list-rv-test.sh
+```
+
+the output of the last command should look like this:
+
+```
+GRASS 6.1.cvs > ./RunGRASSTestSuite.sh module=./tests/general/g.list-rv-test.sh
+===========================================================
+Start Testing single module ./tests/general/g.list-rv-test.sh
+===========================================================
+g.list short function test:   success  success  finished
+===========================================================
+Finished Testing single module ./tests/general/g.list-rv-test.sh
+===========================================================
+Creating text files
+```
+
+The framework will call first "g.list rast" and then "g.list vect". The output is written
+to the logfile. The standart location of the logfiles is /tmp. Default these files will be
+created:
+```
+/tmp/GRASSTestSummary.txt
+/tmp/GRASSTestFailureSummary.txt
+/tmp/GRASSTest.log
+```
+
+You can set these files by command line option.
+If you start the Testsuite with the -h option, html output will be generated.
+
+Now take a look in the summaries and logfile.
+
+If you want write more complex test, just take a look at the TestScriptTemplate
+which vars are available in the framework and look at the more complex tests
+for raster, vector and raster3d tests. Most of them have output md5 checksum
+validation.
